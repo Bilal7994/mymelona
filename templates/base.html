@@ -54,14 +54,15 @@
 
 
 
-              <div class="d-block d-lg-none ml-md-0 mr-auto"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              {% comment %} <div class="d-block d-lg-none ml-md-0 mr-auto"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div> {% endcomment %}
 
               <ul class="site-menu js-clone-nav d-lg-block">
                 <li class="active">
                   <a href="{% url 'home' %}">Home</a>
                 </li>
                 <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
+                {% comment %} <li><a href="{% url 'contact' %}">Contact</a></li> {% endcomment %}
+                
                 
               </ul>
             </nav>
