@@ -25,7 +25,6 @@ def contact(request):
             last_name=last_name,
             email=email,
             phone=phone,
-            wedding_date=wedding_date,
             subject=subject,
             message=message
         )
@@ -33,3 +32,10 @@ def contact(request):
         return render(request, "contact.html", {"success": True})
 
     return render(request, "contact.html")
+
+
+
+from django.http import HttpResponse
+
+def ping(request):
+    return HttpResponse("OK")

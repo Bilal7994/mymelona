@@ -50,22 +50,37 @@
             </div>
            </div>
           <div class="col-9">
-            <nav class="site-navigation position-relative text-right text-md-right" role="navigation">
+            {% comment %} <nav class="site-navigation position-relative text-right text-md-right" role="navigation">
 
 
 
-              {% comment %} <div class="d-block d-lg-none ml-md-0 mr-auto"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div> {% endcomment %}
 
               <ul class="site-menu js-clone-nav d-lg-block">
                 <li class="active">
                   <a href="{% url 'home' %}">Home</a>
                 </li>
                 <li><a href="{% url 'about' %}">About</a></li>
-                {% comment %} <li><a href="{% url 'contact' %}">Contact</a></li> {% endcomment %}
+                
                 
                 
               </ul>
-            </nav>
+            </nav> {% endcomment %}
+
+            <nav class="site-navigation position-relative text-right text-md-right" role="navigation">
+
+              <ul class="site-menu js-clone-nav d-lg-block">
+                
+                <li class="{% if request.path == '/' %}active{% endif %}">
+                  <a href="{% url 'home' %}">Home</a>
+                </li>
+
+                <li class="{% if request.path == '/about/' %}active{% endif %}">
+                  <a href="{% url 'about' %}">About</a>
+                </li>
+
+              </ul>
+
+              </nav>
 
 
           </div>
